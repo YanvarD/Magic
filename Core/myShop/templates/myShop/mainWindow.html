@@ -1,0 +1,11 @@
+{% extends 'myShop/base.html' %}
+{% block content %}
+    <h1>{{ title}}</h1>
+    {% for cat in category %}
+        <li>
+            <h2>{{cat.categoty_name}}</h2>
+            <hr> 
+        </li>
+    {% endfor %}
+{% endblock content %}
+

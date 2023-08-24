@@ -20,5 +20,6 @@ from myShop.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', defaultpage, name= 'dPage')
+    path('', mainWindow),
+    path('about/', about),
 ]
