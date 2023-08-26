@@ -1,11 +1,22 @@
 {% extends 'myShop/base.html' %}
 {% block content %}
-    <h1>{{ title}}</h1>
+    <h2>{{ title}}</h2>
+    
+    <h1>Все категории</h1>
     {% for cat in category %}
-        <li>
-            <h2>{{cat.categoty_name}}</h2>
-            <hr> 
-        </li>
+    
+        
+        
+            <ul>
+                <li>
+                    
+                    <h2><a href= "#">{{cat.categoty_name}}</a></h2>
+                    
+                </li>
+
+            </ul>
+        
+    
     {% endfor %}
 {% endblock content %}
 
