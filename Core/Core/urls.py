@@ -20,6 +20,5 @@ from myShop.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', mainWindow),
-    path('about/', about),
+    path('', include('myShop.urls'))
 ]
