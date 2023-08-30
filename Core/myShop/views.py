@@ -18,19 +18,30 @@ def mainWindow(request):
     return render(request, 'myShop/mainWindow.html', context=context)
 
 def about(request):
-    return render(request, 'myShop/aboutUs.html', {'menu': menu, 
-                                                      'title': 'О нас'})
+    context={'menu': menu, 
+            'title': 'О нас'}
+    return render(request, 'myShop/aboutUs.html', context=context)
     
 def cat(request):
-    return HttpResponse('category')
+    context= {'menu': menu, 
+            'title': 'Категории'}
+    return render(request, 'myShop/сat.html', context=context)
 
 def repair(request):
-    return HttpResponse('repair')
+    category = Category.objects.all()
+    context={'category':category, 
+             'menu': menu, 
+            'title': 'Главная станица'}
+    return render(request, 'myShop/remont.html', context=context)
 
 def product(request):
-    return HttpResponse('product')
+    product = Product.objects.all()
+    context= {'product': product, 'title': 'Железо', 'menu':menu}
+    return render(request, 'myShop/product_base.html', context=context)
 
 def login(request):
-    return HttpResponse('login')
+    context={'menu': menu, 
+            'title': 'Категории'}
+    return render(request, 'myShop/login.html', context=context)
 
     
